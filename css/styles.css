@@ -14,7 +14,7 @@
   --pill-bg: #e9e7e2;
   --pill-text: #141414;
   --radius: 10px;
-  --max-width: 1180px;
+  --max-width: 1600px;
   --font: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -87,7 +87,7 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.7rem;
   color: var(--heading);
   letter-spacing: 0.01em;
@@ -194,7 +194,7 @@ a:hover { text-decoration: underline; }
 .hero {
   flex: 1 1 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 24px 0;
 }
 
@@ -209,7 +209,7 @@ a:hover { text-decoration: underline; }
 .hero-heading {
   font-size: clamp(2.4rem, 5.5vw, 4.2rem);
   font-weight: 400;
-  align-self: center;
+  align-self: start;
   margin: 0 0 0 -6px;
 }
 
@@ -222,6 +222,8 @@ a:hover { text-decoration: underline; }
   font-size: 1rem;
   max-width: 640px;
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .hero-content .btn-stack {
@@ -425,8 +427,8 @@ a.project-card:hover .card-link {
 }
 .footer-grid {
   display: flex;
-  justify-content: flex-end;
-  gap: 72px;
+  justify-content: space-between;
+  gap: 40px;
   flex-wrap: wrap;
 }
 .footer-col h3 {
