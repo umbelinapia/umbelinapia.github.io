@@ -22,6 +22,8 @@
 
 html { scroll-behavior: smooth; }
 
+html, body { height: 100%; }
+
 body {
   margin: 0;
   font-family: var(--font);
@@ -30,6 +32,16 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Home page only: fit hero + footer in the viewport, no scroll needed */
+body.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body.home-page .site-header { flex: 0 0 auto; }
+body.home-page main { flex: 1 1 auto; display: flex; min-height: 0; }
+body.home-page .site-footer { flex: 0 0 auto; margin-top: 0; padding: 20px 0 28px; }
 
 h1, h2, h3 { line-height: 1.15; margin: 0 0 0.5em; color: var(--heading); font-weight: 600; }
 
@@ -68,9 +80,15 @@ a:hover { text-decoration: underline; }
   justify-content: space-between;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
 .logo {
-  font-weight: 500;
-  font-size: 1.15rem;
+  font-weight: 600;
+  font-size: 1.7rem;
   color: var(--heading);
   letter-spacing: 0.01em;
 }
@@ -174,24 +192,25 @@ a:hover { text-decoration: underline; }
    Hero (Home)
    ========================================================== */
 .hero {
-  min-height: 78vh;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
-  padding: 40px 0 80px;
+  padding: 24px 0;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 40px;
   align-items: start;
   width: 100%;
 }
 
 .hero-heading {
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 400;
   align-self: center;
-  margin: 0;
+  margin: 0 0 0 -6px;
 }
 
 .hero-content {
@@ -201,12 +220,16 @@ a:hover { text-decoration: underline; }
 .hero-summary {
   color: var(--accent);
   font-size: 1rem;
-  max-width: 460px;
-  line-height: 1.75;
+  max-width: 640px;
+  line-height: 1.7;
 }
 
 .hero-content .btn-stack {
-  margin-top: 56px;
+  margin-top: 32px;
+}
+
+.hero-content .btn-stack .btn {
+  min-width: 300px;
 }
 
 /* ==========================================================
@@ -431,7 +454,7 @@ a.project-card:hover .card-link {
   .hero-grid {
     grid-template-columns: 1fr;
   }
-  .hero { min-height: auto; padding: 24px 0 56px; }
+  .hero { padding: 16px 0 40px; }
   .footer-grid { justify-content: flex-start; gap: 40px; }
   .footer-bottom { text-align: left; }
 }
@@ -456,7 +479,6 @@ a.project-card:hover .card-link {
   .site-nav.open { display: flex; }
   .site-nav a:not(.btn) { padding: 10px 0; width: 100%; }
   .site-nav .btn { margin-top: 10px; }
-  .site-nav .social-icons { margin-top: 10px; }
 
   .section { padding: 40px 0; }
 }
