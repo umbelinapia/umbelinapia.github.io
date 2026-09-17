@@ -427,8 +427,8 @@ a.project-card:hover .card-link {
 }
 .footer-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: flex-end;
+  gap: 72px;
   flex-wrap: wrap;
 }
 .footer-col h3 {
