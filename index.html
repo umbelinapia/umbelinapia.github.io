@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Umbelina Selva — Robotics &amp; Mechatronics Engineer</title>
 <meta name="description" content="Portfolio of Umbelina Selva, MEng Robotics, Mechatronics and Control Engineering student at Loughborough University.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2322405C'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EUS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c9a876'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='%230a0a0a' text-anchor='middle'%3EUS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,16 +17,16 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="index.html">US</a>
+    <a class="logo" href="index.html">Umbelina Selva</a>
     <nav class="site-nav" id="site-nav">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects/index.html">Projects</a>
       <a href="experience.html">Experience</a>
-      <a href="skills.html">Skills</a>
-      <a href="education.html">Education</a>
-      <a href="contact.html">Contact</a>
-      <a href="assets/cv/Umbelina_Selva_CV.pdf" class="btn btn-small" target="_blank" rel="noopener">CV</a>
+      <a href="projects/index.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a class="social-icon" href="https://github.com/umbelinapia" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      </div>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
@@ -34,53 +37,22 @@
 <main id="main">
 
   <section class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Umbelina Pia Selva</h1>
-      <p class="hero-title">MEng Robotics, Mechatronics and Control Engineering<br>
-        Loughborough University &middot; Expected First &middot; Graduating 06/2027</p>
-      <p class="hero-summary">
-        MEng RMCE student with hands-on software engineering experience across embedded C/Python
-        development, algorithmic problem-solving and systems design, gained through a 12-month
-        industrial placement in medical robotics at Symmetri Surgical (Imperial College London's
-        Hamlyn Centre).
-      </p>
-      <div class="hero-links">
-        <a class="btn btn-primary" href="projects/index.html">View Projects</a>
-        <a class="btn btn-secondary" href="assets/cv/Umbelina_Selva_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-        <a class="btn btn-secondary" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Explore</h2>
-      <div class="nav-cards-grid">
-        <a class="nav-card" href="about.html">
-          <h3>About</h3>
-          <p>Who I am and what I'm working toward.</p>
-        </a>
-        <a class="nav-card" href="projects/index.html">
-          <h3>Projects</h3>
-          <p>Robots I've designed, built and programmed.</p>
-        </a>
-        <a class="nav-card" href="experience.html">
-          <h3>Experience</h3>
-          <p>Medical robotics placement at the Hamlyn Centre.</p>
-        </a>
-        <a class="nav-card" href="skills.html">
-          <h3>Skills</h3>
-          <p>Languages, tools, controls, vision, hardware.</p>
-        </a>
-        <a class="nav-card" href="education.html">
-          <h3>Education</h3>
-          <p>MEng RMCE, Loughborough University.</p>
-        </a>
-        <a class="nav-card" href="contact.html">
-          <h3>Contact</h3>
-          <p>Get in touch or download my CV.</p>
-        </a>
+    <div class="container hero-grid">
+      <h1 class="hero-heading">About Me</h1>
+      <div class="hero-content">
+        <p class="hero-summary">
+          I'm a final-year MEng Robotics, Mechatronics and Control Engineering student at
+          Loughborough University, with hands-on experience across embedded software, machine
+          vision and systems design gained through a medical robotics placement at Symmetri
+          Surgical (Imperial College London's Hamlyn Centre). I care about the commercial side
+          of engineering as much as the technical side — I enjoy pitching ideas and building
+          things in teams — and I'm working toward starting my own company after gaining
+          experience abroad in the UK, Switzerland and the US.
+        </p>
+        <div class="btn-stack">
+          <a class="btn btn-primary" href="assets/cv/Umbelina_Selva_CV.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn btn-primary" href="projects/index.html">Projects</a>
+        </div>
       </div>
     </div>
   </section>
@@ -89,7 +61,18 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; <span id="year"></span> Umbelina Pia Selva</p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Location</h3>
+        <p>Loughborough, UK</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="mailto:u.p.selva-22@student.lboro.ac.uk">u.p.selva-22@student.lboro.ac.uk</a></p>
+        <p><a href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span id="year"></span> Umbelina Pia Selva</p>
   </div>
 </footer>
 
