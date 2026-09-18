@@ -29,6 +29,7 @@
     <div class="social-icons">
       <a class="social-icon" href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
       <a class="social-icon" href="https://github.com/umbelinapia" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      <a class="social-icon" href="mailto:u.p.selva-22@student.lboro.ac.uk" aria-label="Email"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
@@ -48,8 +49,8 @@
   <section class="section">
     <div class="container">
 
-      <div class="media-placeholder" style="margin-bottom:32px;" aria-hidden="true">
-        <span>Photo/video: gantry robot picking cylinders</span>
+      <div class="project-hero-img">
+        <img src="../assets/img/cylinder-pick/build-07.jpg" alt="Top-down view of the 3-DOF gantry robot above the pick workspace marked with red tape, with a white disc inside it">
       </div>
 
       <div class="detail-section">
@@ -85,6 +86,17 @@
           <span class="tag">SolidWorks (CAD)</span>
           <span class="tag">Python</span>
           <span class="tag">Team Collaboration</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">ESP32-S3</span>
+          <span class="tag">Stepper Motor Control</span>
+          <span class="tag">Limit-Switch Homing</span>
+          <span class="tag">Camera-to-Robot Calibration</span>
+          <span class="tag">Safety Interlocks</span>
+          <span class="tag">Serial Command Protocol</span>
+          <span class="tag">Wi-Fi Camera Streaming</span>
+          <span class="tag">Budget Management</span>
+          <span class="tag">Iterative Testing</span>
+          <span class="tag">Technical Presentation</span>
         </div>
       </div>
 
@@ -98,26 +110,46 @@
         </ul>
       </div>
 
+      <div class="detail-section">
+        <h2>What I Learned</h2>
+        <ul class="bullet-list">
+          <li>Turning camera pixels into robot coordinates by calibrating against the real workspace, including correcting for an angled camera view.</li>
+          <li>Making a robot repeatable: homing every joint against a limit switch and adding safety interlocks in the firmware.</li>
+          <li>Splitting a system into a laptop vision script and an ESP32 arm controller that talk through a simple serial handshake.</li>
+          <li>Working as a team to a tight budget, testing in small steps, and demonstrating live under time pressure.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/cylinder-pick/build-01.jpg" alt="Top-down view of the gantry robot with red tape marking the pick workspace and a white disc inside it" loading="lazy">
+            <figcaption>The gantry robot during build and testing</figcaption>
+          </figure>
+          <figure>
+            <img class="media-light" src="../assets/img/cylinder-pick/robot-gripper.jpg" alt="CAD render of the geared two-finger gripper used on the gantry robot" loading="lazy">
+            <figcaption>CAD render of the gripper</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/cylinder-pick/hough-circles-detection-output.png" alt="Camera image with the circle found by the Hough circle detection outlined" loading="lazy">
+            <figcaption>Hough circle detection output</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/cylinder-pick/workspace-capture-01.jpg" alt="Raw camera capture of the workspace used to tune the disc detection" loading="lazy">
+            <figcaption>Raw camera capture used to tune detection</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/umbelinapia/ToothPick" target="_blank" rel="noopener">GitHub repository</a>
+        <a class="btn btn-secondary" href="../assets/docs/robot-control-logic.pdf" target="_blank" rel="noopener">Robot control logic (PDF)</a>
+      </div>
+
     </div>
   </section>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>Location</h3>
-        <p>Loughborough, UK</p>
-      </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <p><a href="mailto:u.p.selva-22@student.lboro.ac.uk">u.p.selva-22@student.lboro.ac.uk</a></p>
-        <p><a href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener">LinkedIn</a></p>
-      </div>
-    </div>
-    <p class="footer-bottom">&copy; <span id="year"></span> Umbelina Pia Selva</p>
-  </div>
-</footer>
 
 <script src="../js/main.js"></script>
 </body>

@@ -33,16 +33,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Home page only: fit hero + footer in the viewport, no scroll needed */
-body.home-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-body.home-page .site-header { flex: 0 0 auto; }
-body.home-page main { flex: 1 1 auto; display: flex; min-height: 0; }
-body.home-page .site-footer { flex: 0 0 auto; margin-top: 0; padding: 20px 0 28px; }
-
 h1, h2, h3 { line-height: 1.15; margin: 0 0 0.5em; color: var(--heading); font-weight: 600; }
 
 p { margin: 0 0 1em; }
@@ -226,12 +216,105 @@ a:hover { text-decoration: underline; }
   text-justify: inter-word;
 }
 
-.hero-content .btn-stack {
+.hero-left .btn-stack {
   margin-top: 32px;
 }
 
-.hero-content .btn-stack .btn {
+.hero-left .btn-stack .btn {
   min-width: 300px;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 32px;
+  max-width: 640px;
+}
+
+/* ==========================================================
+   Project images
+   ========================================================== */
+.card-media,
+.project-hero-img {
+  background: #000;
+  border-bottom: 1px solid var(--border);
+}
+.card-media img,
+.project-hero-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-media { height: 320px; }
+.project-hero-img {
+  height: 480px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.media-light,
+.gallery img.media-light { background: #eceef3; }
+
+/* Language level bars */
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+.lang-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--body-text);
+}
+.lang-head span:last-child { color: var(--accent); font-weight: 600; }
+.bar {
+  height: 8px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(201, 168, 118, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.gallery figure {
+  margin: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #000;
+}
+.gallery figcaption {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* ==========================================================
@@ -363,6 +446,11 @@ a.project-card:hover .card-link {
   color: var(--body-text);
 }
 .bullet-list li { margin-bottom: 0.5em; }
+.entry-sub {
+  margin: 20px 0 4px;
+  font-size: 0.95rem;
+  color: var(--heading);
+}
 
 /* ==========================================================
    Tags
@@ -418,38 +506,6 @@ a.project-card:hover .card-link {
 }
 
 /* ==========================================================
-   Footer
-   ========================================================== */
-.site-footer {
-  border-top: 1px solid var(--border);
-  margin-top: 80px;
-  padding: 56px 0;
-}
-.footer-grid {
-  display: flex;
-  justify-content: flex-end;
-  gap: 72px;
-  flex-wrap: wrap;
-}
-.footer-col h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-.footer-col p {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0 0 4px;
-}
-.footer-col a { color: var(--muted); }
-.footer-col a:hover { color: var(--accent); }
-.footer-bottom {
-  text-align: right;
-  margin-top: 40px;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-/* ==========================================================
    Responsive
    ========================================================== */
 @media (max-width: 900px) {
@@ -457,8 +513,9 @@ a.project-card:hover .card-link {
     grid-template-columns: 1fr;
   }
   .hero { padding: 16px 0 40px; }
-  .footer-grid { justify-content: flex-start; gap: 40px; }
-  .footer-bottom { text-align: left; }
+  .about-details { grid-template-columns: 1fr; }
+  .card-media { height: 220px; }
+  .project-hero-img { height: 260px; }
 }
 
 @media (max-width: 720px) {

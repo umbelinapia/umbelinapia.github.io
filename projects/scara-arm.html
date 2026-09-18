@@ -29,6 +29,7 @@
     <div class="social-icons">
       <a class="social-icon" href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
       <a class="social-icon" href="https://github.com/umbelinapia" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      <a class="social-icon" href="mailto:u.p.selva-22@student.lboro.ac.uk" aria-label="Email"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
     </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
@@ -48,8 +49,8 @@
   <section class="section">
     <div class="container">
 
-      <div class="media-placeholder" style="margin-bottom:32px;" aria-hidden="true">
-        <span>Photo/video: SCARA arm performing pick-and-place</span>
+      <div class="project-hero-img">
+        <img src="../assets/img/go-robot/robot_isometric_view.png" alt="Fully assembled 3-DOF SCARA robotic arm above a white Go board with stones lined up on either side">
       </div>
 
       <div class="detail-section">
@@ -86,6 +87,15 @@
           <span class="tag">Python GUI Development</span>
           <span class="tag">Forward/Inverse Kinematics</span>
           <span class="tag">Mechanical Troubleshooting</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Servo Control (PWM)</span>
+          <span class="tag">Serial Communication (Python &harr; Arduino)</span>
+          <span class="tag">Timing Belt &amp; Pulley Drive</span>
+          <span class="tag">3D Printing</span>
+          <span class="tag">Circuit Wiring &amp; Stripboard Soldering</span>
+          <span class="tag">Coordinate Calibration</span>
+          <span class="tag">Command Parsing &amp; Task Logic</span>
+          <span class="tag">Technical Documentation</span>
         </div>
       </div>
 
@@ -100,28 +110,51 @@
         </ul>
       </div>
 
-      <a class="btn btn-primary" href="https://github.com/umbelinapia/GoPlayingRobot" target="_blank" rel="noopener">View code on GitHub</a>
+      <div class="detail-section">
+        <h2>What I Learned</h2>
+        <ul class="bullet-list">
+          <li>Turning board positions into joint angles with inverse kinematics, then calibrating the real robot against the maths using servo offsets and measured target coordinates.</li>
+          <li>Keeping a Python GUI and an Arduino in step with a short, structured serial command format.</li>
+          <li>How mechanical design choices (belt drive, joint tolerances, backlash) directly limit software accuracy.</li>
+          <li>Taking a project from CAD to wiring to firmware to GUI on my own, and documenting it clearly.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/img/go-robot/labeled_component_overview.png" alt="Annotated photos labelling the casing, bowl, stone, timing belt and pulley, end-effector and power switch" loading="lazy">
+            <figcaption>Main parts of the robot</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/go-robot/cad_dimensioned_cross_section.png" alt="Dimensioned CAD cross-section of the arm and base assembly with measurements in millimetres" loading="lazy">
+            <figcaption>Dimensioned CAD cross-section of the arm and base</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/go-robot/gripper_servo_horn_positions.png" alt="Three side views of the gripper servo horn at release, neutral and pick-up positions" loading="lazy">
+            <figcaption>Gripper servo positions: release, neutral and pick-up</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/go-robot/go_gui_board_with_stones.png" alt="Python GUI showing a 5x5 Go board with black and white stones and the Arduino link enabled" loading="lazy">
+            <figcaption>Python GUI used to send moves to the robot</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/img/go-robot/system_block_diagram.png" alt="Block diagram: Python GUI sends serial commands to an Arduino Uno, which drives three servos on the SCARA robot" loading="lazy">
+            <figcaption>System block diagram</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/umbelinapia/GoPlayingRobot" target="_blank" rel="noopener">View code on GitHub</a>
+        <a class="btn btn-secondary" href="../assets/docs/go-robot-report.pdf" target="_blank" rel="noopener">Report</a>
+        <a class="btn btn-secondary" href="../assets/docs/go-robot-poster.pdf" target="_blank" rel="noopener">Poster</a>
+      </div>
 
     </div>
   </section>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3>Location</h3>
-        <p>Loughborough, UK</p>
-      </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <p><a href="mailto:u.p.selva-22@student.lboro.ac.uk">u.p.selva-22@student.lboro.ac.uk</a></p>
-        <p><a href="https://www.linkedin.com/in/umbelina-selva-4996ab295" target="_blank" rel="noopener">LinkedIn</a></p>
-      </div>
-    </div>
-    <p class="footer-bottom">&copy; <span id="year"></span> Umbelina Pia Selva</p>
-  </div>
-</footer>
 
 <script src="../js/main.js"></script>
 </body>
