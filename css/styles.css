@@ -22,7 +22,7 @@
 
 html { scroll-behavior: smooth; }
 
-body { min-height: 100vh; padding-bottom: 64px; }
+body { min-height: 100vh; padding-bottom: 136px; }
 
 body {
   margin: 0;
@@ -585,4 +585,77 @@ body.home-page .section { padding: 80px 0 24px; }
   text-align: right;
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+/* Placement Year gallery: photos cropped to fill their frames */
+.gallery.fill img { object-fit: cover; }
+
+/* ==========================================================
+   Small screens (phones / small tablets).
+   Everything below only applies on narrow screens, so the
+   computer layout is not affected.
+   ========================================================== */
+@media (max-width: 900px) {
+  .nav-left { gap: 28px; }
+  .site-nav { gap: 22px; }
+  .logo { font-size: 1.45rem; }
+  .meta { white-space: normal; }
+}
+
+@media (max-width: 720px) {
+  body { padding-bottom: 92px; }
+  img { max-width: 100%; }
+  .container { padding: 0 20px; }
+
+  /* Header: one slim line */
+  .site-header { padding: 10px 0; }
+  .nav-left { gap: 0; }
+  .logo { font-size: 1.2rem; white-space: nowrap; }
+  .social-icons { gap: 8px; margin-left: auto; margin-right: 6px; }
+  .social-icon { position: relative; width: 34px; height: 34px; }
+  .social-icon::after { content: ""; position: absolute; inset: -5px; }
+  .nav-toggle { width: 44px; height: 44px; align-items: center; padding: 0; }
+  .site-nav { padding: 6px 20px 14px; }
+  .site-nav a:not(.btn) { padding: 12px 0; }
+
+  /* Footer: slimmer */
+  .site-footer { height: 44px; }
+  .footer-bottom { font-size: 0.72rem; text-align: center; }
+
+  /* Headings, spacing, text */
+  .hero { padding: 12px 0 8px; }
+  .hero-heading { margin-left: 0; font-size: clamp(2.2rem, 12vw, 3rem); }
+  .hero-left .btn-stack { width: 100%; margin-top: 20px; }
+  .hero-left .btn-stack .btn { min-width: 0; width: 100%; }
+  .page-hero { padding: 28px 0 8px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .meta { white-space: normal; }
+  .section { padding: 28px 0; }
+  body.home-page .section { padding: 40px 0 4px; }
+  .section-title { font-size: 1.3rem; }
+  .detail-section { margin-bottom: 28px; }
+  .prose, .bullet-list, .intro { font-size: 0.98rem; overflow-wrap: anywhere; }
+  .intro { text-align: left; }
+  .tag { font-size: 0.78rem; padding: 4px 10px; overflow-wrap: anywhere; }
+
+  /* Cards, entries, buttons, galleries */
+  .card-body, .project-card-upcoming .card-body { padding: 18px; }
+  .entry-heading { flex-direction: column; gap: 2px; }
+  .btn-row { flex-direction: column; }
+  .btn-row .btn { width: 100%; }
+  .detail-section > .btn { width: 100%; }
+  .gallery { grid-template-columns: 1fr; gap: 16px; }
+  .two-col { gap: 36px; }
+}
+
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .logo { font-size: 1.05rem; }
+  .social-icons { gap: 6px; margin-right: 2px; }
+  .social-icon { width: 32px; height: 32px; }
+}
+
+/* Phone: project / experience list cards show title, date and yellow text only */
+@media (max-width: 720px) {
+  .project-card .card-body > p:not(.entry-org) { display: none; }
 }
