@@ -208,14 +208,6 @@ a:hover { text-decoration: underline; }
   margin: 0 0 0 -6px;
 }
 
-.hero-left .btn-stack {
-  margin-top: 32px;
-}
-
-.hero-left .btn-stack .btn {
-  min-width: 300px;
-}
-
 /* ==========================================================
    Project images
    ========================================================== */
@@ -626,8 +618,6 @@ body.home-page .section { padding: 80px 0 24px; }
   /* Headings, spacing, text */
   .hero { padding: 12px 0 8px; }
   .hero-heading { margin-left: 0; font-size: clamp(2.2rem, 12vw, 3rem); }
-  .hero-left .btn-stack { width: 100%; margin-top: 20px; }
-  .hero-left .btn-stack .btn { min-width: 0; width: 100%; }
   .page-hero { padding: 28px 0 8px; }
   .page-hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
   .meta { white-space: normal; }
