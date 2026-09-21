@@ -660,23 +660,8 @@ body.home-page .section { padding: 80px 0 24px; }
   .project-card .card-body > p:not(.entry-org) { display: none; }
 }
 
-/* Creativity photo: shown whole (never cropped), sized to its own shape */
-.creativity-photo {
-  display: block;
-  width: clamp(240px, 24vw, 380px);
-  height: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
+/* Creativity: labeled photo examples, below the tag list */
+.creativity-gallery { margin-top: 24px; }
 
-/* Creativity: tags get the wide left area, the drawing sits at the right edge */
-.creativity-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 32px;
-  align-items: start;
-}
-@media (max-width: 900px) {
-  .creativity-grid { grid-template-columns: 1fr; gap: 0; }
-  .creativity-photo { width: 100%; max-width: 380px; }
-}
+/* Sports: level text without a bar, plus a benefit sentence */
+.sport-note { margin-top: 14px; }
