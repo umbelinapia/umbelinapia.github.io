@@ -600,6 +600,7 @@ body.home-page .section { padding: 80px 0 24px; }
   .site-nav { gap: 22px; }
   .logo { font-size: 1.45rem; }
   .meta { white-space: normal; }
+  .creativity-gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -660,8 +661,9 @@ body.home-page .section { padding: 80px 0 24px; }
   .project-card .card-body > p:not(.entry-org) { display: none; }
 }
 
-/* Creativity: labeled photo examples, below the tag list */
-.creativity-gallery { margin-top: 24px; }
+/* Creativity: four labeled photo examples, cropped to fill their frame, one row */
+.creativity-gallery { grid-template-columns: repeat(4, 1fr); }
+.creativity-gallery img { object-fit: cover; background: none; }
 
 /* Sports: level text without a bar, plus a benefit sentence */
 .sport-note { margin-top: 14px; }
